@@ -14,8 +14,6 @@ export default function Mydata() {
     }
 
     return (
-
-
         <div>
             <input type="text" onChange={Handler} value={Input} />
 
@@ -24,12 +22,11 @@ export default function Mydata() {
             {reviews.filter((value, index, array) => {
                 return (value.name.indexOf(Input) >= 0)
             })
-            .map((value, index, array) => {
-                return (<h2>{value.name}</h2>)
-            })}
-
+                .map((value, index, array) => {
+                    return <h5>{value.name}</h5>
+                })}
         </div>
-
+         
     )
 }
 
