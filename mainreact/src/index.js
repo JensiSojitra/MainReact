@@ -10,12 +10,21 @@ import Mycounter from './Component/Mycounter';
 import Magic from './Component/Magic';
 import Mydata from './Component/Mydata'; 
 import Scrollbar from './Component/Scrollbar';
+import Mytask from './Component/Pages/Mytask';
+import Fetch from './Component/Useeffect/Fetch';
+import Task from './Component/Useeffect/Task1';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Scrollbar /> 
+    {/* <Scrollbar />  */}
+    {/* <Mycounter/> */}
+    {/* <Magic/> */}
+    {/* <Mydata/> */}
+    {/* <Mytask/> */}
+    {/* <Fetch/> */}
+    <Task/>
   </React.StrictMode>
 );
 

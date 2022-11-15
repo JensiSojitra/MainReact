@@ -30,27 +30,27 @@ export default function Mytask() {
 
             </section>
             <section className='menu'>
-                            <div className="section-center">
-            {menu.map((value) => {
-                return ( 
-                       
-                                <article className="menu-item">
-                                    <img src={r} alt="menu item" className="photo" />
-                                    <div className="item-info">
-                                        <header>
-                                            <h4>${value.title}</h4>
-                                            <h4 className="price">{value.price}</h4>
-                                        </header>
-                                        <p className="item-text">
-                                            {value.desc}
-                                        </p>
-                                    </div>
-                                </article>
-                          
-                )
-            })}
-  </div>
-                        </section>
+                <div className="section-center">
+                    {menu.map((value) => {
+                        return (
+
+                            <article className="menu-item">
+                                <img src={r} alt="menu item" className="photo" />
+                                <div className="item-info">
+                                    <header>
+                                        <h4>${value.title}</h4>
+                                        <h4 className="price">{value.price}</h4>
+                                    </header>
+                                    <p className="item-text">
+                                        {value.desc}
+                                    </p>
+                                </div>
+                            </article>
+
+                        )
+                    })}
+                </div>
+            </section>
         </div>
     )
 }
