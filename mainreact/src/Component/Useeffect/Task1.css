@@ -1,0 +1,11 @@
+table,
+th,
+td {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+tr:hover {
+    background-color: rgba(169, 169, 169, 0.281);
+    cursor: pointer;
+}
