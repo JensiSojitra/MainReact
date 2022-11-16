@@ -15,8 +15,6 @@ export default function Fetch() {
             })
     }, []);
 
- 
-
     const Assending = () => {
         let mydata1 = [...data];
         mydata1.sort(function(a,b) {
@@ -80,8 +78,6 @@ export default function Fetch() {
                                 <td>{value.address.geo.lng}</td> */}
                             </tr>
                         </table>
-
-
                     </>
                 )
             })}
