@@ -13,6 +13,10 @@ import Scrollbar from './Component/Scrollbar';
 import Mytask from './Component/Pages/Mytask';
 import Fetch from './Component/Useeffect/Fetch';
 import Task from './Component/Useeffect/Task1';
+import Axios from './Component/Useeffect/Axios';
+import DataAxios from './Component/Useeffect/Axios';
+import Employeedatail from './Component/Employeedatail';
+import StudentDetail from './Component/StudentDetail';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -24,7 +28,10 @@ root.render(
     {/* <Mydata/> */}
     {/* <Mytask/> */}
     {/* <Fetch/> */}
-    <Task/>
+    {/* <Task/> */}
+    {/* <DataAxios/> */}
+    {/* <Employeedatail/> */}
+    <StudentDetail/>
   </React.StrictMode>
 );
 

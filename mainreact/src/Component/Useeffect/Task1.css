@@ -1,11 +1,35 @@
 table,
 th,
 td {
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 5px;
+}
+
+table {
+    width: 100%;
 }
 
 tr:hover {
     background-color: rgba(169, 169, 169, 0.281);
     cursor: pointer;
 }
+
+.search {
+    padding: 10px 100px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+
+/* studentDetails task  */
+
+.studentform-background {
+    width: 40%;
+    padding: 15px;
+    margin: 0 auto;
+    /* background-image: url(https://www.pexels.com/photo/close-up-photo-of-green-leaves-3178786/);
+    background-size: cover;
+    background-attachment: fixed; */
+}
+
+.studentform-background>input {}

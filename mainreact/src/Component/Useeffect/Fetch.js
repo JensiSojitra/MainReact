@@ -1,7 +1,5 @@
 import React from 'react'
-import { useState, useEffect } from 'react';
-// import './Fetch.css'
-
+import { useState, useEffect } from 'react'; 
 export default function Fetch() {
     const [data, setdata] = useState([]);
 
