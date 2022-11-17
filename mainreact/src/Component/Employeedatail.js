@@ -1,40 +1,44 @@
-import {React,useState} from 'react';
+import { React, useState } from 'react';
 
 const Employeedatail = () => {
     const [Detail, setDetail] = useState({
-        firstname:"",
-        lastname:"",
-        email:"",
-        mobileNo:"",
-        city:"",
-        state:"",
-        age:""
+        firstname: "",
+        lastname: "",
+        email: "",
+        mobileNo: "",
+        city: "",
+        state: "",
+        age: "",
+        gender: "",
+        hobbies: []
     });
 
-    const firstnameHandler = (e) =>{
-        setDetail({...Detail,firstname:e.target.value})
-    }
-    const lastnameHandler = (e) =>{
-        setDetail({...Detail,lastname:e.target.value})
-    }
-    const emailHandler = (e) =>{
-        setDetail({...Detail,email:e.target.value})
-    }
-    const mobilenoHandler = (e) =>{
-        setDetail({...Detail,mobileNo:e.target.value})
-    }
-    const cityHandler = (e) =>{
-        setDetail({...Detail,city:e.target.value})
-    }
-    const stateHandler = (e) =>{
-        setDetail({...Detail,state:e.target.value})
-    }
-    const ageHandler = (e) =>{
-        setDetail({...Detail,age:e.target.value})
+
+    const myHandler = (e) => {
+
+        if (e.target.name == "hobbies") {
+
+            let mydata = Detail.hobbies;
+            
+            if (e.target.checked) {
+                mydata.push(e.target.value)
+                setDetail({ ...Detail, hobbies: mydata })
+            }
+            else {
+                let mydata1 = mydata.filter((value) => {
+                    return (
+                        value != e.target.value
+                    )
+                })
+                setDetail({ ...Detail, hobbies: mydata1 })
+            }
+
+        } else {
+            setDetail({ ...Detail, [e.target.name]: e.target.value })
+        }
     }
 
-
-    const Datasubmit = (e) =>{
+    const Datasubmit = (e) => {
         e.preventDefault()
         console.log(Detail);
     }
@@ -42,17 +46,29 @@ const Employeedatail = () => {
         <div>
             <form onSubmit={Datasubmit}>
 
-                <input type="text" name="firstname"  onChange={firstnameHandler}/>
-                <input type="text" name="lastname"  onChange={lastnameHandler}/>
-                <input type="text" name="email"  onChange={emailHandler}/>
-                <input type="text" name="mobileNo"  onChange={mobilenoHandler}/>
-                <input type="text" name="city"  onChange={cityHandler}/>
-                <input type="text" name="state"  onChange={stateHandler}/>
-                <input type="text" name="age"  onChange={ageHandler}/> 
+                Firstname:<input type="text" name="firstname" onChange={myHandler} /><br />
+                Lastname:<input type="text" name="lastname" onChange={myHandler} /><br />
+                Email:<input type="text" name="email" onChange={myHandler} /><br />
+                Mobile No:<input type="text" name="mobileNo" onChange={myHandler} /><br />
+                City:<input type="text" name="city" onChange={myHandler} /><br />
+                State:<input type="text" name="state" onChange={myHandler} /><br />
+                Age:<input type="text" name="age" onChange={myHandler} /><br />
+
+                <label>Gender:</label>
+                <label>Male</label>
+                <input type="radio" name="gender" value='male' onClick={myHandler} />
+                <label>Female</label>
+                <input type="radio" name="gender" value='female' onClick={myHandler} /><br />
+
+                <label>Hobbies:</label>
+                <label>Cricket</label>
+                <input type="checkbox" name="hobbies" value='cricket' onClick={myHandler} />
+                <label>Read Books</label>
+                <input type="checkbox" name="hobbies" value='readbooks' onClick={myHandler} /><br />
 
                 <input type="submit" value="Submit" />
             </form>
-            
+
         </div>
     );
 }
