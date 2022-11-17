@@ -27,9 +27,12 @@ tr:hover {
     width: 40%;
     padding: 15px;
     margin: 0 auto;
-    /* background-image: url(https://www.pexels.com/photo/close-up-photo-of-green-leaves-3178786/);
-    background-size: cover;
-    background-attachment: fixed; */
+    color: white;
+    backdrop-filter: blur(40px);
 }
 
-.studentform-background>input {}
+.mainstudent {
+    background-image: url(https://media.istockphoto.com/id/1380002028/photo/abstract-dark-background-with-blurred-lines.jpg?s=612x612&w=0&k=20&c=6ABBYblthUGOMWZLzQqR5QdhRlkY4j70aYVo1zGwnlQ=);
+    background-size: cover;
+    background-attachment: fixed;
+}

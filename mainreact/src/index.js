@@ -30,8 +30,8 @@ root.render(
     {/* <Fetch/> */}
     {/* <Task/> */}
     {/* <DataAxios/> */}
-    {/* <Employeedatail/> */}
-    <StudentDetail/>
+    <Employeedatail/>
+    {/* <StudentDetail/> */}
   </React.StrictMode>
 );
 
