@@ -18,21 +18,19 @@ const Employeedatail = () => {
 
         if (e.target.name == "hobbies") {
 
-            let mydata = Detail.hobbies;
-            
+           let mydata=Detail.hobbies;
+
             if (e.target.checked) {
-                mydata.push(e.target.value)
-                setDetail({ ...Detail, hobbies: mydata })
-            }
-            else {
-                let mydata1 = mydata.filter((value) => {
-                    return (
-                        value != e.target.value
+                mydata.push(e.target.value);
+                setDetail({...Detail,hobbies:mydata})
+            } else {
+                let mydata1=mydata.filter((val)=>{
+                    return(
+                        val!=e.target.value
                     )
                 })
-                setDetail({ ...Detail, hobbies: mydata1 })
+                setDetail({...Detail,hobbies:mydata1})
             }
-
         } else {
             setDetail({ ...Detail, [e.target.name]: e.target.value })
         }
