@@ -8,7 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import Home from './Component/Home';
 import Mycounter from './Component/Mycounter';
 import Magic from './Component/Magic';
-import Mydata from './Component/Mydata'; 
+import Mydata from './Component/Mydata';
 import Scrollbar from './Component/Scrollbar';
 import Mytask from './Component/Pages/Mytask';
 import Fetch from './Component/Useeffect/Fetch';
@@ -22,15 +22,15 @@ import StudentDetail from './Component/StudentDetail';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <Scrollbar />  */}
-    {/* <Mycounter/> */}
-    {/* <Magic/> */}
-    {/* <Mydata/> */}
     {/* <Mytask/> */}
+    {/* <Scrollbar />  */}
+    {/* <Mycounter /> */}
+    {/* <Magic/> */}
+    {/* <Mydata /> */}
     {/* <Fetch/> */}
     {/* <Task/> */}
     {/* <DataAxios/> */}
-    <Employeedatail/>
+    {/* <Employeedatail/> */}
     {/* <StudentDetail/> */}
   </React.StrictMode>
 );
