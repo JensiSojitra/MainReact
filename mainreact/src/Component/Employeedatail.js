@@ -12,6 +12,15 @@ const Employeedatail = () => {
         gender: "",
         hobbies: []
     });
+    const [validation, setvalidation] = useState({
+        firstname: "",
+        lastname: "",
+        email: "",
+        mobileNo: "",
+        city: "",
+        state: "",
+        age: ""
+    });
 
 
     const myHandler = (e) => {
@@ -32,25 +41,42 @@ const Employeedatail = () => {
                 setDetail({...Detail,hobbies:mydata1})
             }
         } else {
+
+            if (e.target.value=="") {
+                setvalidation({...validation, [e.target.name]:`*${e.target.name} is required`})
+            }else  if (/^[A-Za-z]+$/.test(e.target.value)==false&& e.target.name=="firstname") {
+                setvalidation({...validation, firstname:"Firstname is invalid"})
+            } else{
+                setvalidation({...validation, [e.target.name]:""})
+            }            
             setDetail({ ...Detail, [e.target.name]: e.target.value })
         }
     }
 
     const Datasubmit = (e) => {
         e.preventDefault()
+        localStorage.setItem("form",JSON.stringify(Detail))
         console.log(Detail);
+        setDetail({firstname:"",lastname:"",email:"",mobileNo:"",city:"",state:"",age:"",gender:"",hobbies:"" })
     }
     return (
         <div>
             <form onSubmit={Datasubmit}>
 
-                Firstname:<input type="text" name="firstname" onChange={myHandler} /><br />
-                Lastname:<input type="text" name="lastname" onChange={myHandler} /><br />
-                Email:<input type="text" name="email" onChange={myHandler} /><br />
-                Mobile No:<input type="text" name="mobileNo" onChange={myHandler} /><br />
-                City:<input type="text" name="city" onChange={myHandler} /><br />
-                State:<input type="text" name="state" onChange={myHandler} /><br />
-                Age:<input type="text" name="age" onChange={myHandler} /><br />
+                Firstname:<input type="text" name="firstname" onChange={myHandler} />
+                <span style={{color:"red"}}>{validation.firstname}</span><br />
+                Lastname:<input type="text" name="lastname" onChange={myHandler} />
+                <span style={{color:"red"}}>{validation.lastname}</span><br />
+                Email:<input type="text" name="email" onChange={myHandler} />
+                <span style={{color:"red"}}>{validation.email}</span><br />
+                Mobile No:<input type="text" name="mobileNo" onChange={myHandler} />
+                <span style={{color:"red"}}>{validation.mobileNo}</span><br />
+                City:<input type="text" name="city" onChange={myHandler} />
+                <span style={{color:"red"}}>{validation.city}</span><br />
+                State:<input type="text" name="state" onChange={myHandler} />
+                <span style={{color:"red"}}>{validation.state}</span><br />
+                Age:<input type="text" name="age" onChange={myHandler} />
+                <span style={{color:"red"}}>{validation.age}</span><br />
 
                 <label>Gender:</label>
                 <label>Male</label>
@@ -65,6 +91,8 @@ const Employeedatail = () => {
                 <input type="checkbox" name="hobbies" value='readbooks' onClick={myHandler} /><br />
 
                 <input type="submit" value="Submit" />
+
+                <div>{localStorage.getItem("form",JSON.stringify(Detail))}</div>
             </form>
 
         </div>

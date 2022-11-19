@@ -54,6 +54,7 @@ const StudentDetail = () => {
     const datasubmit = (r) => {
         r.preventDefault();
         console.log(data);
+        localStorage.setItem("form",JSON.stringify(data))
     }
 
     return (
