@@ -49,8 +49,8 @@ root.render(
     {/* <TestAPI2 /> */}
     {/* <TestAPI3 /> */}
     {/* <TestAPI4 /> */}
-    {/* <TestAPI5 /> */}
-    <TestAPI6 />
+    <TestAPI5 />
+    {/* <TestAPI6 /> */}
   </React.StrictMode>
 );
 

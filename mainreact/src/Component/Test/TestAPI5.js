@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { React, useState, useEffect } from 'react';
 
 const TestAPI5 = () => {
@@ -5,11 +6,13 @@ const TestAPI5 = () => {
     const [data, setdata] = useState([]);
 
     useEffect(() => {
-        fetch('https://api.punkapi.com/v2/beers')
-            .then(r => r.json())
-            .then((r) => {
-                setdata(r)
-            })
+        // fetch('https://api.punkapi.com/v2/beers')
+        //     .then(r => r.json())
+        //     .then((r) => {
+        //         setdata(r)
+        //     })
+        axios.get('https://api.punkapi.com/v2/beers')
+            .then((r) => { setdata(r.data) })
     }, []);
     return (
         <div>
