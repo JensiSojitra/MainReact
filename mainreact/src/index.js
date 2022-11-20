@@ -17,21 +17,40 @@ import Axios from './Component/Useeffect/Axios';
 import DataAxios from './Component/Useeffect/Axios';
 import Employeedatail from './Component/Employeedatail';
 import StudentDetail from './Component/StudentDetail';
+import Data from './Component/Test/Data';
+import Formtest from './Component/Test/Formtest';
+import TestAPI1 from './Component/Test/TestAPI1';
+import TestAPI2 from './Component/Test/TestAPI2';
+import TestAPI3 from './Component/Test/TestAPI3';
+import TestAPI4 from './Component/Test/TestAPI4';
+import TestAPI5 from './Component/Test/TestAPI5';
+import TestAPI6 from './Component/Test/TestAPI6';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <Mytask/> */}
-    {/* <Scrollbar />  */}
+    {/* <Scrollbar /> */}
     {/* <Mycounter /> */}
     {/* <Magic/> */}
     {/* <Mydata /> */}
     {/* <Fetch/> */}
     {/* <Task/> */}
     {/* <DataAxios/> */}
-    {/* <Employeedatail/> */}
-    {/* <StudentDetail/> */}
+    {/* <Employeedatail /> */}
+    {/* <StudentDetail /> */}
+
+
+    {/* test */}
+    {/* <Data /> */}
+    {/* <Formtest /> */}
+    {/* <TestAPI1 /> */}
+    {/* <TestAPI2 /> */}
+    {/* <TestAPI3 /> */}
+    {/* <TestAPI4 /> */}
+    {/* <TestAPI5 /> */}
+    <TestAPI6 />
   </React.StrictMode>
 );
 

@@ -15,3 +15,22 @@ code {
     justify-content: center;
     text-align: center;
 } */
+
+.formall input {
+    border: 0px;
+    border-bottom: 3px solid black;
+    border-radius: 0;
+}
+
+.formall {
+    background-color: white;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.formtestbody {
+    background-image: url(https://images.unsplash.com/photo-1547127796-06bb04e4b315?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
