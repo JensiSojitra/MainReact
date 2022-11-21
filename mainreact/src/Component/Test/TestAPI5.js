@@ -24,7 +24,7 @@ const TestAPI5 = () => {
                     <th>tagline</th>
                     <th>first_brewed</th>
                     <th>description</th>
-                    <th> image</th>
+                    <th>image</th>
                     <th>abv</th>
                     <th>ibu</th>
                     <th>target_fg</th>

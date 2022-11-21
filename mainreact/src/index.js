@@ -25,6 +25,7 @@ import TestAPI3 from './Component/Test/TestAPI3';
 import TestAPI4 from './Component/Test/TestAPI4';
 import TestAPI5 from './Component/Test/TestAPI5';
 import TestAPI6 from './Component/Test/TestAPI6';
+import Formcollage from './Component/Formcollage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -49,8 +50,10 @@ root.render(
     {/* <TestAPI2 /> */}
     {/* <TestAPI3 /> */}
     {/* <TestAPI4 /> */}
-    <TestAPI5 />
+    {/* <TestAPI5 /> */}
     {/* <TestAPI6 /> */}
+
+    <Formcollage />
   </React.StrictMode>
 );
 
