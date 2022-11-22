@@ -51,7 +51,6 @@ export default function FormTask() {
                 setIsdisable(false)
             }
 
-
         } else {
             setdata({ ...data, [e.target.name]: e.target.value })
         }

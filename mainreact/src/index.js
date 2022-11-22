@@ -27,6 +27,7 @@ import TestAPI5 from './Component/Test/TestAPI5';
 import TestAPI6 from './Component/Test/TestAPI6';
 import Formcollage from './Component/Form/Formcollage';
 import FormTask from './Component/Form/FormTask';
+import Mydataformik from './Component/Form/Myformikform';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -55,7 +56,9 @@ root.render(
     {/* <TestAPI6 /> */}
 
     {/* <Formcollage /> */}
-    <FormTask />
+    {/* <FormTask /> */}
+
+    <Mydataformik />
   </React.StrictMode>
 );
 
