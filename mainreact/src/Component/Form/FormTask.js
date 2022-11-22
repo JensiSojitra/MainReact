@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React, useRef, useState } from 'react'
 import Select from 'react-select';
 
 export default function FormTask() {
@@ -13,6 +13,8 @@ export default function FormTask() {
         enddate: "",
         check: ""
     });
+
+    const [isDisable, setIsdisable] = useState(false);
 
 
     const Titlename = [
@@ -41,11 +43,18 @@ export default function FormTask() {
 
     const Handler = (e) => {
         if (e.target.type == 'checkbox') {
-            setdata({ ...data, [e.target.name]: e.target.checked })
+
+            if (e.target.checked == true) {
+                setIsdisable(true)
+                setdata({ ...data, "enddate": "" })
+            } else {
+                setIsdisable(false)
+            }
+
+
         } else {
             setdata({ ...data, [e.target.name]: e.target.value })
         }
-
 
     }
 
@@ -56,8 +65,6 @@ export default function FormTask() {
     return (
         <>
             <form action="" onSubmit={Datasubmit} className='collageform mt-5'>
-
-
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-2"></div>
@@ -123,7 +130,7 @@ export default function FormTask() {
                             <input type="date" name="startdate" id="" className='form-control' onChange={Handler} />
                         </div><br /><br />
                         <div className="col-sm-4">
-                            <input type="date" name="enddate" id="" className='form-control' onChange={Handler} />
+                            <input type="date" name="enddate" id="" className='form-control' onChange={Handler} value={data.enddate} disabled={isDisable} />
                         </div>
                     </div>
                 </div><br />
@@ -150,27 +157,6 @@ export default function FormTask() {
                 </div>
 
 
-                {/* <label htmlFor="">Name:</label><br />
-                <input type="text" name='firstname' placeholder='First name' onChange={Handler} />
-                <input type="text" name='lastname' placeholder='Last name' onChange={Handler} /><br />
-
-                <label htmlFor="">Education:</label>
-                <Select options={Educationname} name='education' onChange={(e) => {
-                    Handler({ target: { name: 'education', value: e.value } })
-                }} className='sssssssssss' />
-
-                <label htmlFor="">University:</label>
-                <Select options={Universityname} name='university' onChange={(e) => {
-                    Handler({ target: { name: 'university', value: e.value } })
-                }} className='sssssssssss' />
-
-                <label htmlFor="">Date:</label> <br />
-                <input type="date" name="startdate" id="" onChange={Handler} />
-                <input type="date" name="enddate" id="" onChange={Handler} /><br /><br /> */}
-
-                {/* <input type="checkbox" name="check" id="" onClick={Handler} />are you currently studying in university.<br /><br /> */}
-
-                {/* <input type="submit" value="Submit" /> */}
             </form>
         </>
     )
