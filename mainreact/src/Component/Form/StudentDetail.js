@@ -1,5 +1,4 @@
 import { React, useState } from 'react';
-import './Useeffect/Task1.css'
 
 const StudentDetail = () => {
     const [data, setdata] = useState({

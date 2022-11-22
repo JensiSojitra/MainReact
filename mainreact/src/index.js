@@ -15,8 +15,8 @@ import Fetch from './Component/Useeffect/Fetch';
 import Task from './Component/Useeffect/Task1';
 import Axios from './Component/Useeffect/Axios';
 import DataAxios from './Component/Useeffect/Axios';
-import Employeedatail from './Component/Employeedatail';
-import StudentDetail from './Component/StudentDetail';
+import Employeedatail from './Component/Form/Employeedatail';
+import StudentDetail from './Component/Form/StudentDetail';
 import Data from './Component/Test/Data';
 import Formtest from './Component/Test/Formtest';
 import TestAPI1 from './Component/Test/TestAPI1';
@@ -25,7 +25,8 @@ import TestAPI3 from './Component/Test/TestAPI3';
 import TestAPI4 from './Component/Test/TestAPI4';
 import TestAPI5 from './Component/Test/TestAPI5';
 import TestAPI6 from './Component/Test/TestAPI6';
-import Formcollage from './Component/Formcollage';
+import Formcollage from './Component/Form/Formcollage';
+import FormTask from './Component/Form/FormTask';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -53,7 +54,8 @@ root.render(
     {/* <TestAPI5 /> */}
     {/* <TestAPI6 /> */}
 
-    <Formcollage />
+    {/* <Formcollage /> */}
+    <FormTask />
   </React.StrictMode>
 );
 
