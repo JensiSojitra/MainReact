@@ -30,6 +30,7 @@ import FormTask from './Component/Form/FormTask';
 import Mydataformik from './Component/Form/Myformikform';
 import FormikTask from './Component/Form/FormikTask';
 import Carformik from './Component/Form/Carformik';
+import Formyupvalidation from './Component/Form/Formyupvalidation';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -64,8 +65,9 @@ root.render(
 
     {/* --------------------------FORMIK-FORM--------------------------- */}
     {/* <Mydataformik /> */}
-    <FormikTask />
+    {/* <FormikTask /> */}
     {/* <Carformik /> */}
+    <Formyupvalidation />
   </React.StrictMode>
 );
 
