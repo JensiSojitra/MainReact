@@ -29,6 +29,7 @@ import Formcollage from './Component/Form/Formcollage';
 import FormTask from './Component/Form/FormTask';
 import Mydataformik from './Component/Form/Myformikform';
 import FormikTask from './Component/Form/FormikTask';
+import Carformik from './Component/Form/Carformik';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -63,7 +64,8 @@ root.render(
 
     {/* --------------------------FORMIK-FORM--------------------------- */}
     {/* <Mydataformik /> */}
-    <FormikTask />
+    {/* <FormikTask /> */}
+    <Carformik />
   </React.StrictMode>
 );
 
