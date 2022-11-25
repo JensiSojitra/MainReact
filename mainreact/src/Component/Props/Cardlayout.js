@@ -3,7 +3,7 @@ import React from 'react';
 const Cardlayout = (data) => {
     return (
 
-        <div className='col-4'>
+        <div className='col-4' >
 
             <div className='text-center ' id='rajan'>
                 <div className="card  m-3 " >
