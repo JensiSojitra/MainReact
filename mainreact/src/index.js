@@ -31,6 +31,7 @@ import Mydataformik from './Component/Form/Myformikform';
 import FormikTask from './Component/Form/FormikTask';
 import Carformik from './Component/Form/Carformik';
 import Formyupvalidation from './Component/Form/Formyupvalidation';
+import Simpleprops from './Component/Props/Simpleprops';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -67,7 +68,10 @@ root.render(
     {/* <Mydataformik /> */}
     {/* <FormikTask /> */}
     {/* <Carformik /> */}
-    <Formyupvalidation />
+    {/* <Formyupvalidation /> */}
+
+    {/* --------------------------Props--------------------------- */}
+    <Simpleprops />
   </React.StrictMode>
 );
 
