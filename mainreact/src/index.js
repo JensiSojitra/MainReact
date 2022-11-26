@@ -32,6 +32,7 @@ import FormikTask from './Component/Form/FormikTask';
 import Carformik from './Component/Form/Carformik';
 import Formyupvalidation from './Component/Form/Formyupvalidation';
 import Simpleprops from './Component/Props/Simpleprops';
+import Task1props from './Component/Props/Task1props';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -62,7 +63,7 @@ root.render(
 
     {/* ---------------------------------FORM--------------------------- */}
     {/* <Formcollage /> */}
-    {/* <FormTask /> */}
+    <FormTask />
 
     {/* --------------------------FORMIK-FORM--------------------------- */}
     {/* <Mydataformik /> */}
@@ -71,7 +72,8 @@ root.render(
     {/* <Formyupvalidation /> */}
 
     {/* --------------------------Props--------------------------- */}
-    <Simpleprops />
+    {/* <Simpleprops /> */}
+    {/* <Task1props /> */}
   </React.StrictMode>
 );
 
