@@ -63,7 +63,7 @@ root.render(
 
     {/* ---------------------------------FORM--------------------------- */}
     {/* <Formcollage /> */}
-    <FormTask />
+    {/* <FormTask /> */}
 
     {/* --------------------------FORMIK-FORM--------------------------- */}
     {/* <Mydataformik /> */}
@@ -73,7 +73,7 @@ root.render(
 
     {/* --------------------------Props--------------------------- */}
     {/* <Simpleprops /> */}
-    {/* <Task1props /> */}
+    <Task1props />
   </React.StrictMode>
 );
 
